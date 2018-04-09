@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Trivia Game</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Golly Gee It's Golf Jeopardy!</h1>
+            <h3>Time Remaining: </h3>
+        </header>
+        <button id="start" type="button">Start!</button>
+
+        <div id="scoreboard">
+            <p>All Done!</p>
+            <p id="correct"></p>
+            <p id="incorrect"></p>
+            <p id="unanswered"></p>
+        </div>
+        <div id="question-container">
+            <section>
+                <form>
+                    <p id="questions">This "Golden Bear" won his 6th Master's Tournament in 1987 when he was 46 years old.</p>
+                    <div>
+                        <input type="radio" name="old" class="wrong">
+                        <label>Arnold Palmer</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="old" class="wrong">
+                        <label>Gary Player</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="old" id="Jack">
+                        <label>Jack Nicklaus</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="old" class="wrong">
+                        <label>Lee Trevino</label>
+                    </div>
+                </form>
+                <br>
+                <form>
+                    <p id="questions">This country is considered the birthplace of golf.</p>
+                    <div>
+                        <input type="radio" name="place" id="Scotland">
+                        <label>Scotland</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="place" class="wrong">
+                        <label>Germany</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="place" class="wrong">
+                        <label>Ireland</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="place" class="wrong">
+                        <label>Spain</label>
+                    </div>
+                </form>
+                <br>
+                <form>
+                    <p id="questions">This 1980 golf classic starred Chevy Chase, Bill Murray, and Rodney Dangerfield.</p>
+                    <div>
+                        <input type="radio" name="movie" class="wrong">
+                        <label>Happy Gilmore</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="movie" class="wrong">
+                        <label>Tin Cup</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="movie" class="wrong">
+                        <label>The Legend of Bagger Vance</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="movie" id="Caddyshack">
+                        <label>Caddyshack</label>
+                    </div>
+                </form>
+                <br>
+                <form>
+                    <p id="questions">This 14-time major winner underwent a series of health issues and a public scandal that nearly ended his career.</p>
+                    <div>
+                        <input type="radio" name="golfers" class="wrong">
+                        <label>John Daly</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="golfers" class="wrong">
+                        <label>Phil Mickelson</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="golfers" id="Tiger">
+                        <label>Tiger Woods</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="golfers" class="wrong">
+                        <label>Ben Hogan</label>
+                    </div>
+                </form>
+                <br>
+                <form>
+                    <p id="questions">This Frenchman is known for his epic collapse on the last hole of the 1999 Open Championship.</p>
+                    <div>
+                        <input type="radio" name="french" class="wrong">
+                        <label>Rafa Cabrera Bello</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="french" id="Jean">
+                        <label>Jean Van de Velde</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="french" class="wrong">
+                        <label>Sergio Garcia</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="french" class="wrong">
+                        <label>Jon Rahm</label>
+                    </div>
+                </form>
+                <br>
+                <form>
+                    <p id="questions">He is considered the best golfer to be born and raised Minnesota.</p>
+                    <div>
+                        <input type="radio" name="minnesota" class="wrong">
+                        <label>Zach Johnson</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="minnesota" id="Tom">
+                        <label>Tom Lehman</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="minnesota" class="wrong">
+                        <label>Cameron Beckman</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="minnesota" class="wrong">
+                        <label>Steve Stricker</label>
+                    </div>
+                </form>
+            </section>
+            <br>
+        </div>
+        <button id="submit" type="button">Submit</button>        
+        <button id="reset" type="button">Reset</button>
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
