@@ -7,11 +7,14 @@ var answers = []
 
 $(document).ready(function () {
 
+    // define click events
     $("#start").on("click", startGame);
     $("#reset").on("click", resetGame);
     $("#scoreboard").hide();
     $("#submit").on("click", displayScore);
+    $("input[type=radio]").attr('disabled', true);
 
+    // update score 
     $("input[id=Jack]").on("click", function () {
         correctAns++;
     });
@@ -24,16 +27,20 @@ $(document).ready(function () {
     $("input[id=Tiger]").on("click", function () {
         correctAns++;
     });
+    $("input[id=Jean]").on("click", function () {
+        correctAns++;
+    });
     $("input[id=Tom]").on("click", function () {
         correctAns++;
     });
     $("input[class=wrong]").on("click", function () {
         incorrectAns++;
     });
-
+    
 
     function startGame() {
         intervalId = setInterval(decrement, 1000);
+        $("input[type=radio]").attr('disabled', false);
     }
 
     function decrement() {
@@ -60,6 +67,7 @@ $(document).ready(function () {
         $("#question-container").show();
         $("input[type=radio]").prop("checked", false);
         stopGame();
+        $("input[type=radio]").attr('disabled', true);
     }
 
     function displayScore() {
