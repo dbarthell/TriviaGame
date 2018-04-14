@@ -36,7 +36,11 @@ $(document).ready(function () {
     $("input[class=wrong]").on("click", function () {
         incorrectAns++;
     });
-    
+
+    if (!$('input[name="old"]').is(':checked')) {
+        unanswered++;
+    } 
+
 
     function startGame() {
         intervalId = setInterval(decrement, 1000);
