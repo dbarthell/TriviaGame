@@ -2,7 +2,6 @@ var count = 25;
 var intervalId;
 var correctAns = 0;
 var incorrectAns = 0;
-var unanswered = 0;
 var answers = []
 
 $(document).ready(function () {
@@ -37,10 +36,6 @@ $(document).ready(function () {
         incorrectAns++;
     });
 
-    if (!$('input[name="old"]').is(':checked')) {
-        unanswered++;
-    } 
-
 
     function startGame() {
         intervalId = setInterval(decrement, 1000);
@@ -65,7 +60,6 @@ $(document).ready(function () {
         count = 15;
         correctAns = 0;
         incorrectAns = 0;
-        unanswered = 0;
         $("h3").text("Time Remaining: " + count);
         $("#scoreboard").hide();
         $("#question-container").show();
@@ -79,7 +73,6 @@ $(document).ready(function () {
         $("#question-container").hide();
         $("#correct").text("Correct Answers: " + correctAns);
         $("#incorrect").text("Incorrect Answers: " + incorrectAns);
-        $("#unanswered").text("Unanswered: " + unanswered);
         stopGame();
     }
 
